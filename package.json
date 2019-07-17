@@ -1,0 +1,23 @@
+{
+  "name": "friend-matcher",
+  "version": "1.0.0",
+  "description": "server.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oudomso/friend-matcher.git"
+  },
+  "author": "dojm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oudomso/friend-matcher/issues"
+  },
+  "homepage": "https://github.com/oudomso/friend-matcher#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
