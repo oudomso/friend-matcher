@@ -1,22 +1,53 @@
 var friendList = [
     {
-      name: 'Oudom So',
-      profilePic: 'https://scontent.ffcm1-1.fna.fbcdn.net/v/t1.0-9/65886321_1102676119942773_3885293369479397376_n.jpg?_nc_cat=109&_nc_oc=AQnXImQJSVvxYzqVyzbUlg5WB5X7WfX_gOEfKIJQyK7BwYhPGXGIyPVNUEVc8RjLRxU&_nc_ht=scontent.ffcm1-1.fna&oh=e6116482ed625b5f37e01f8372720c29&oe=5DAC404C',
+      name: 'Daniel RadCliffe',
+      profilePic: 'https://thenypost.files.wordpress.com/2019/02/daniel-radcliffe-index11.jpg?quality=90&strip=all',
+      scores: [
+        "1",
+        "3",
+        "2",
+        "2",
+        "1",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      name: 'Emma Watson',
+      profilePic: 'https://media.glamour.com/photos/58333f1bd21c762b7072ba8a/4:3/w_3264,h_2448,c_limit/EMMA%20WATSON.jpg',
+      scores: [
+        "3",
+        "2",
+        "3",
+        "3",
+        "4",
+        "2",
+        "3",
+        "2",
+        "3",
+        "2"
+      ]
+
+    },
+    {
+      name: 'Chris HelmsWorth',
+      profilePic: 'https://i0.wp.com/glitched.africa/wp-content/uploads/2019/04/Chris-Hemsworth-1-e1554205275459.jpg?fit=2000%2C1333&ssl=1',
       scores: [
         "4",
         "5",
         "5",
-        "2",
+        "4",
         "4",
         "5",
         "4",
         "4",
-        "3",
+        "5",
         "4"
       ]
-    },
-    {
-
+      
 
     },
   ]

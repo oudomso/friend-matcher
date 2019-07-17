@@ -20,9 +20,8 @@
             </div>
             <h1 style="color: red">Questions</h1>
 			<div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Like to go outdoor.</h1></label>
 				<select class="form-control" style="width:10%"id="q1">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -31,9 +30,8 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Enjoy Working Out.</h1></label>
 				<select class="form-control" style="width:10%"id="q2">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -42,9 +40,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Like Reading Books.</h1></label>
 				<select class="form-control" style="width:10%"id="q3">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -53,9 +50,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Watches Anime.</h1></label>
 				<select class="form-control" style="width:10%"id="q4">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -64,9 +60,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Enjoy Eating Out.</h1></label>
 				<select class="form-control" style="width:10%"id="q5">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -75,9 +70,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Have a Strict Budget.</h1></label>
 				<select class="form-control" style="width:10%"id="q6">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -86,9 +80,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Plays Guitar.</h1></label>
 				<select class="form-control" style="width:10%"id="q7">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -97,9 +90,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Like Dogs more than Cats.</h1></label>
 				<select class="form-control" style="width:10%"id="q8">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -108,9 +100,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Eat Healthy Foods.</h1></label>
 				<select class="form-control" style="width:10%"id="q9">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -119,9 +110,8 @@
 				</select>
             </div>
             <div class="form-group">
-				<label for="question1"> <h3>I like going outdoor.</h1></label>
+				<label for="question1"> <h3>Enjoy Extreme Sports.</h1></label>
 				<select class="form-control" style="width:10%"id="q10">
-					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -143,7 +133,7 @@
 					</div>
 					<div class="modal-body">
 						<h2 id="bestFriend"></h2>
-						<img id="bestFriendPhoto" src="#">
+						<img width="300px" id="bestFriendPhoto">
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -173,7 +163,7 @@
 	$("#submitBtn").on("click", function(event) {
 		event.preventDefault();
 
-		if($("#name").val() != "" || $("#photo").val() != "") {
+		if($("#name").val().trim() != "" && $("#photo").val().trim() != "") {
 		
 			var newUser = {
 				name: $("#name").val().trim(),
@@ -194,7 +184,7 @@
 			var currentURL = window.location.origin;
 			$.post(currentURL + "/api/friends", newUser, function(data) {
 				$("#bestFriend").text(data.name);
-				$("#bestFriendPhoto").attr("src", data.photo);
+				$("#bestFriendPhoto").attr("src", data.profilePic);
 				$("#bestFriendModal").modal("toggle");
 			});
 		} else {
